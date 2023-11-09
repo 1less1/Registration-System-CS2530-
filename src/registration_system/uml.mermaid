@@ -1,0 +1,29 @@
+classDiagram
+    class User
+    User <|-- Faculty
+    User <|-- Student
+    User : private name
+    User : private Integer idNumber
+    User: public String getName()
+
+
+
+    Faculty: private String department
+    Student: private String classification
+
+    class Course
+    Course <--Roster
+    Course <--Faculty
+    Course: public String courseName
+    Course: public String ArrayList Roster
+    Course: public Faculty assignedTeacher
+    Course: Integer maxCap
+    Course: public void getProf()
+
+
+    class Roster
+    Roster <--Student
+    Roster: public ArrayList<Student>= new ArrayList<Student>()
+    Roster: public void addStudent()
+    Roster: public voidPrintRoster()
+    Roster: public ArrayList getRoster()
